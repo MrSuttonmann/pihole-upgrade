@@ -1,6 +1,6 @@
 #!/bin/bash
 if [[ "$EUID" = 0 ]]; then
-    docker compose pull pihole/pihole
+    docker pull pihole/pihole
     docker rm -f pihole
     docker compose up -d
 else
